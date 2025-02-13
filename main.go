@@ -27,12 +27,12 @@ func main() {
 
 	if num < chance {
 		if verbose {
-			fmt.Printf("The %d percent chance succeeded!\n", chance)
+			fmt.Printf("The %d percent chance succeeded with a %d!\n", chance, num)
 		}
 		os.Exit(0)
 	} else {
 		if verbose {
-			fmt.Printf("The %d percent chance failed!\n", chance)
+			fmt.Printf("The %d percent chance failed with a %d!\n", chance, num)
 		}
 		os.Exit(1)
 	}
