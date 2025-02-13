@@ -3,13 +3,15 @@ A simple command line utility that succeeds sometimes.
 
 ## Installation
 
-With Go installed:
+Since there are no binaries being distributed at this time, you will need to [install Go](https://go.dev/dl/), at least version 1.20. You might as well just get the newest one, you won't regret it.
+
+With Go installed, you can do the remote install thing with just one step:
 
 ```bash
 go install github.com/pymander/maybe@latest
 ```
 
-Or build from source:
+Or go slow and steady and build from source:
 
 ```bash
 git clone https://github.com/pymander/maybe
@@ -17,7 +19,7 @@ cd maybe
 go build
 ```
 
-Binary will be installed to `$GOPATH/bin` when using `go install`, or in the current directory when using `go build`.
+The `maybe` binary will be installed to `$GOPATH/bin` when using `go install`, or in the current directory when using `go build`.
 
 ## Usage
 
