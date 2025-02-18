@@ -26,8 +26,12 @@ The `maybe` binary will be installed to `$GOPATH/bin` when using `go install`, o
 ```
   -chance int
         Percent chance from 1 to 99 (default 50)
+  -extra
+        Be extra random, cryptographically so
   -verbose
         Be noisy
+  -version
+        Print the current version
 ```
 
 The percent chance is used to determine whether maybe exits with a 0 or a 1. This lets you create, for example, cron jobs that have a chance of running, but won't run all the time. You can do something like this:

@@ -12,9 +12,12 @@ var version = "1.0.0"
 func main() {
 	var chance int
 	var verbose bool
+	var extra bool
+	var num int
 
 	flag.IntVar(&chance, "chance", 50, "Percent chance from 1 to 99")
 	flag.BoolVar(&verbose, "verbose", false, "Be noisy")
+	flag.BoolVar(&extra, "extra", false, "Be extra random, cryptographically so")
 	flag.Bool("version", false, "Print the current version")
 	flag.Parse()
 
@@ -38,7 +41,12 @@ func main() {
 	}
 
 	// You know why? Because this should generate a random int from 0 to 99.
-	num := rand.Intn(100)
+	if extra {
+		rng := &Generator{}
+		num = rng.Intn(100)
+	} else {
+		num = rand.Intn(100)
+	}
 
 	if num < chance {
 		if verbose {
