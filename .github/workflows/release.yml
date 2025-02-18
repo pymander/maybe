@@ -1,0 +1,33 @@
+name: Release Binary
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '1.23'
+          
+      - name: Build
+        run: |
+          GOOS=linux GOARCH=amd64 go build -o bin/maybe-linux-amd64
+          GOOS=darwin GOARCH=amd64 go build -o bin/maybe-darwin-amd64
+          GOOS=windows GOARCH=amd64 go build -o bin/maybe-windows-amd64.exe
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            bin/maybe-linux-amd64
+            bin/maybe-darwin-amd64
+            bin/maybe-windows-amd64.exe
