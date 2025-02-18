@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-var version = "1.0.0"
+var version = "1.1.0"
 
 func main() {
 	var chance int
