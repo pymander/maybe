@@ -28,6 +28,11 @@ func TestMoonPhase(t *testing.T) {
             1.2,
         },
         {
+            "Known New Moon 4",
+            time.Date(2028, 8, 20, 10, 44, 0, 0, time.UTC),
+            1.2,
+        },
+        {
             "Known Full Moon 1",
             time.Date(2025, 5, 12, 16, 55, 0, 0, time.UTC),
             0.8,
@@ -35,6 +40,11 @@ func TestMoonPhase(t *testing.T) {
         {
             "Known Full Moon 2",
             time.Date(2026, 11, 24, 14, 53, 0, 0, time.UTC),
+            0.8,
+        },
+        {
+            "Known Full Moon 3",
+            time.Date(2028, 8, 5, 8, 11, 0, 0, time.UTC),
             0.8,
         },
     }

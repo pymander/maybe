@@ -21,16 +21,16 @@ func moonPhase(t time.Time) float64 {
 
 // Transform the Moon's age into a weighted multiplier.
 func getMoonMultiplier(age float64) float64 {
-    // Convert age to radians 
-    radians := age * 2 * math.Pi
-    
-    // Cosine wave oscillates between -1 and 1
-    // - Full moon (age ~14.765) should be lowest (0.8)
-    // - New moon (age 0 or meanSynodicMonth) should be highest (1.2)
-    base := math.Cos(radians)
-    
-    // Transform -1...1 into 0.8...1.2
-    multiplier := 1.0 + (base * 0.2)
-    
-    return multiplier
+	// Convert age to radians
+	radians := (age / meanSynodicMonth) * 2 * math.Pi
+
+	// Cosine wave oscillates between -1 and 1
+	// - Full moon (age ~14.765) should be lowest (0.8)
+	// - New moon (age 0 or meanSynodicMonth) should be highest (1.2)
+	base := math.Cos(radians)
+
+	// Transform -1...1 into 0.8...1.2
+	multiplier := 1.0 + (base * 0.2)
+
+	return multiplier
 }
