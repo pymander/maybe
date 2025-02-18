@@ -28,6 +28,8 @@ The `maybe` binary will be installed to `$GOPATH/bin` when using `go install`, o
         Percent chance from 1 to 99 (default 50)
   -extra
         Be extra random, cryptographically so
+  -moon
+        Weight chances based on the phase of the Moon
   -verbose
         Be noisy
   -version
