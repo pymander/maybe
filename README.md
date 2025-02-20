@@ -3,7 +3,9 @@ A simple command line utility that succeeds sometimes.
 
 ## Installation
 
-Since there are no binaries being distributed at this time, you will need to [install Go](https://go.dev/dl/), at least version 1.20. You might as well just get the newest one, you won't regret it.
+There are pre-built binaries available on [the project's release page](https://github.com/pymander/maybe/releases). You can install one of those by downloading it, making it executable, and sticking it somewhere in your shell's command search path.
+
+To install from source, you will need to [install Go](https://go.dev/dl/), at least version 1.20. You might as well just get the newest one, you won't regret it.
 
 With Go installed, you can do the remote install thing with just one step:
 
